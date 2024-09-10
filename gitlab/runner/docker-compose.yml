@@ -1,0 +1,14 @@
+services:
+  gitlab-runner:
+    image: gitlab/gitlab-runner:alpine
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./gitlab-runner-config:/etc/gitlab-runner
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: '2G'

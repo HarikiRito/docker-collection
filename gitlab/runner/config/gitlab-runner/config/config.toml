@@ -1,0 +1,8 @@
+concurrent = 100
+
+[[runners]]
+name = "nextjs-runner"
+limit = 2
+url = "https://gitlab.com/"
+token = ""
+executor = "docker"
