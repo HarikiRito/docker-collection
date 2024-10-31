@@ -6,3 +6,9 @@ limit = 2
 url = "https://gitlab.com/"
 token = ""
 executor = "docker"
+cache_dir = "/cache"
+[runners.docker]
+disable_cache = false
+cahce_dir = ""
+image = "node:22-alpine3.19"
+volumes = ["/cache"]
